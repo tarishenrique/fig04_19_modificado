@@ -20,10 +20,11 @@ int main()
     int a[arraySize];
 
     initArray(a, arraySize);
-
-    printArray(a, arraySize);
-
-    printElement(linearSearch(a, arraySize, inputValue()));
+    
+    int value = inputValue();
+    int element = linearSearch(a, arraySize, value);
+    
+    printArray(a, arraySize, element);
 
     return 0;
 }
@@ -54,13 +55,6 @@ int linearSearch(const int array[], int sizeOfArray, int key )
     return -1;
 }
 
-void printElement( int c ) {
-    if (c != -1)
-        cout << "Valor encontrado no elemento " << c << endl;
-    else
-        cout << "Valor não encontrado" << endl;
-}
-
 void printArray(int a[], int arraysize) {
 
     cout << "Itens de dados do array\n";
@@ -69,4 +63,9 @@ void printArray(int a[], int arraysize) {
         cout << setw(4) << "[" << i << "]-" << a[i];
 
     cout << endl;
+    
+    if (c != -1)
+        cout << "Valor encontrado no elemento " << c << endl;
+    else
+        cout << "Valor nÃ£o encontrado" << endl;
 }
