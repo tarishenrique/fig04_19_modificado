@@ -11,8 +11,7 @@ using namespace std;
 void initArray( int[], const int );
 int inputValue(void);
 int linearSearch(const int[], int, int);
-void printElement(int);
-void printArray(int[], int );
+void printArray(int[], int, int );
 
 int main()
 {
@@ -55,7 +54,7 @@ int linearSearch(const int array[], int sizeOfArray, int key )
     return -1;
 }
 
-void printArray(int a[], int arraysize) {
+void printArray(int a[], int arraysize, int c) {
 
     cout << "Itens de dados do array\n";
     int i;
